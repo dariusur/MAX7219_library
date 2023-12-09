@@ -9,8 +9,8 @@ Library for control of 8x8 LED matrix driven by MAX7219 display driver. This lib
 - Does not support cascaded displays.
 
 ## Functions
-void init();
-void clear();
-void configCtrlReg(uint8_t reg_address, uint8_t data);
-void configIntensity(uint8_t intensity);
-void switchLED(uint8_t column, uint8_t row, uint8_t data);
+- void init();
+- void clear();
+- void configCtrlReg(uint8_t reg_address, uint8_t data);
+- void configIntensity(uint8_t intensity);
+- void switchLED(uint8_t column, uint8_t row, uint8_t data);
