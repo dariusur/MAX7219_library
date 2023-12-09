@@ -1,5 +1,5 @@
 # MAX7219_library
-Library for control of 8x8 LED matrix driven by MAX7219 display driver. This library was written for the intention to be used for a microcontroller based gaming console.
+Library for control of 8x8 LED matrix driven by MAX7219 display driver. This library was written with the intention to be used for a microcontroller based gaming console.
 
 ![image](MAX7219_LED_matrix.jpg)
 
