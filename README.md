@@ -4,10 +4,9 @@ Library for control of 8x8 LED matrix driven by MAX7219 display driver. This lib
 ![image](MAX7219_LED_matrix.jpg)
 
 ## Features
-- Simple setup with one function which configures display for normal operation.
 - Easy driver configuration with dedicated functions, normal operation can be initialized with a single function.
-- Each LED is controlled individually.
 - Software implemented SPI protocol allows to unconstrained selection of CS, CLK and DATA pins.
+- Each LED is controlled individually.
 - Does not support cascaded displays.
 
 ## Functions
