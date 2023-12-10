@@ -48,6 +48,10 @@ This library was tested using the STM32 NUCLEO-F446RE development board. In the 
 4. In the main.c file add lines of code as shown in Fig. 3.
 5. Compile and upload code.
 
+<ol start=4>
+  <li>Line</li>
+  <li>Line again</li>
+</ol>
 text
 1. asd { start=2 }
 2. dswq
