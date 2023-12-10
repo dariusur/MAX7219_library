@@ -49,8 +49,8 @@ This library was tested using the STM32 NUCLEO-F446RE development board. In the 
 5. Compile and upload code.
 
 text
-1. asd
-2. dswq
+2. asd
+3. dswq
 
 <p align="center">
   <img src="https://github.com/dariusur/MAX7219_library/blob/main/images/SPI_config.png">
