@@ -4,7 +4,7 @@ Library for control of an 8x8 LED matrix driven by MAX7219 display driver. Teste
   <img src="https://github.com/dariusur/MAX7219_library/blob/main/images/MAX7219_LED_matrix.jpg">
 </p>
 <p align="center">
-<i>Fig. 1. MAX7219 display driver chip with an 8x8 LED matrix</i>
+<i>Fig. 1. MAX7219 display driver chip with an 8x8 LED matrix.</i>
 </p>
       
 ## Features
@@ -43,9 +43,13 @@ To use MAX7219 display driver with STM32 microcontroller you will also need a lo
 This library was tested using the STM32 NUCLEO-F446RE development board. In the case of another board or some unexpected errors due to different software version here is what to do:
 1. In STM32CubeIDE create a new project and go through the usual setup of the development board.
 2. In the .ioc file set up the SPI protocol the way that its shown in Fig. 2.
-![image](images/MAX7219_LED_matrix.jpg)
-*Fig. 2. SPI configuration*
-3. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
-4. In the main.c file add lines of code as shown in Fig. 3.
+<p align="center">
+  <img src="https://github.com/dariusur/MAX7219_library/blob/main/images/SPI_config.png">
+</p>
+<p align="center">
+Fig. 2. SPI configuration.
+</p>
+4. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
+5. In the main.c file add lines of code as shown in Fig. 3.
 `printf("asdasd");`
-5. Compile and upload code.
+6. Compile and upload code.
