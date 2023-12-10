@@ -44,17 +44,6 @@ To use MAX7219 display driver with STM32 microcontroller you will also need a lo
 This library was tested using the STM32 NUCLEO-F446RE development board. In the case of another board or some unexpected errors due to different software version here is what to do:
 1. In STM32CubeIDE create a new project and go through the usual setup of the development board.
 2. In the .ioc file set up the SPI protocol the way that its shown in Fig. 2.
-3. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
-4. In the main.c file add lines of code as shown in Fig. 3.
-5. Compile and upload code.
-
-<ol start=4>
-  <li>Line</li>
-  <li>Line again</li>
-</ol>
-text
-1. asd { start=2 }
-2. dswq
 
 <p align="center">
   <img src="https://github.com/dariusur/MAX7219_library/blob/main/images/SPI_config.png">
@@ -63,3 +52,12 @@ text
   <i>Fig. 2. SPI configuration.</i>
 </p>
 <br></br>
+
+4. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
+5. In the main.c file add lines of code as shown in Fig. 3.
+6. Compile and upload code.
+
+<ol start=4>
+  <li>Line</li>
+  <li>Line again</li>
+</ol>
