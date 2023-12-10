@@ -1,7 +1,7 @@
 #include "MAX7219.h"
 
 // Defines microcontroller pins connected to MAX7219
-MaxMatrix::MaxMatrix(uint8_t _din, uint8_t _cs, uint8_t _clk) 
+MAX7219::MAX7219(uint8_t _din, uint8_t _cs, uint8_t _clk) 
 {
 	din = _din;
 	cs = _cs;
@@ -9,7 +9,7 @@ MaxMatrix::MaxMatrix(uint8_t _din, uint8_t _cs, uint8_t _clk)
 }
 
 // Prepares assigned pins for communication and sets up MAX7219 chip for operation to control LED matrix.
-void MaxMatrix::init()
+void MAX7219::init()
 {
 	pinMode(din, OUTPUT);
 	pinMode(clk, OUTPUT);
@@ -24,15 +24,8 @@ void MaxMatrix::init()
 	clear(); // Turn all LEDs off
 }
 
-// Changes LED brightness by using an internal PWM modulator.
-// Accepts a range of intensity values from 0 to 15.
-void MaxMatrix::configIntensity(uint8_t intensity)
-{
-	configCtrlReg(max7219_reg_intensity, intensity);
-}
-
 // Clears the frame buffer which turns all LEDs off.
-void MaxMatrix::clear()
+void MAX7219::clear()
 {
 	for (int i=0; i<8; i++){
 		frame_buffer[i] = 0;
@@ -43,7 +36,7 @@ void MaxMatrix::clear()
 	}
 }
 
-void MaxMatrix::configCtrlReg(uint8_t reg_address, uint8_t data)
+void MAX7219::configCtrlReg(uint8_t reg_address, uint8_t data)
 {
 	digitalWrite(cs, LOW);
 	shiftOut(din, clk, MSBFIRST, reg_address);
@@ -51,7 +44,7 @@ void MaxMatrix::configCtrlReg(uint8_t reg_address, uint8_t data)
 	digitalWrite(cs, HIGH);
 }
 
-void MaxMatrix::switchLED(uint8_t column, uint8_t row, uint8_t data)
+void MAX7219::switchLED(uint8_t column, uint8_t row, uint8_t data)
 {
     bitWrite(frame_buffer[column], row, data); // sets or clears a bit in register
 	digitalWrite(cs, LOW);

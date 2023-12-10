@@ -19,22 +19,29 @@
 #define max7219_reg_shutdown    0x0c
 #define max7219_reg_displayTest 0x0f
 
+// Register initial configuration values
+#define decodeMode_reg_config 0x00 // No decode for digits 7-0
+#define intensity_reg_config 0x02 // 0x00 - 0x0F
+#define scanLimit_reg_config 0x07 // display all digits
+#define shutdown_reg_config 0x01 // normal operation
+#define displayTest_reg_config 0x00 // normal operation
+
+#define 
+
 class MAX7219
 {
-  private:
+  public:
+    MAX7219(uint8_t din, uint8_t cs, uint8_t clk);
+    void init();
+    void clear();
+    void sendData(uint8_t reg_address, uint8_t data);
+    void switchLED(uint8_t column, uint8_t row, uint8_t data);
+
+   private:
     uint8_t din;
     uint8_t cs;
     uint8_t clk;
     uint8_t frame_buffer[8]; // assign 64 bits (8x8 matrix) of memory to hold the states of LEDs
-  
-  public:
-    MAX7219(uint8_t din, uint8_t cs, uint8_t clk);
-      
-    void init();
-    void clear();
-    void configCtrlReg(uint8_t reg_address, uint8_t data);
-    void configIntensity(uint8_t intensity);
-    void switchLED(uint8_t column, uint8_t row, uint8_t data);
 };
 
 #endif
