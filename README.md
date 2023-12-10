@@ -3,7 +3,7 @@ Library for control of an 8x8 LED matrix driven by MAX7219 display driver. Teste
 <p align="center">
   <img src="https://github.com/dariusur/MAX7219_library/blob/main/images/MAX7219_LED_matrix.jpg">
 </p>
-*Fig. 1. MAX7219 display driver chip with an 8x8 LED matrix*
+      *Fig. 1. MAX7219 display driver chip with an 8x8 LED matrix*
 
 ## Features
 - Easy driver configuration with dedicated functions, normal operation can be initialized with a single function.
