@@ -55,7 +55,6 @@ This library was tested using the STM32 NUCLEO-F446RE development board. In the 
 
 4. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
 5. In the main.c file add lines of code shown below.
-
 ```cpp
 #include "MAX7219.h"
 MAX7219 matrix(&hspi1);
