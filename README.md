@@ -1,5 +1,5 @@
 # MAX7219_library
-Library for control of an 8x8 LED matrix driven by MAX7219 display driver. Tested on Arduino Uno, Arduino Nano and STM32 NUCLEO-F446RE development boards. This library was written with the intention to be used for a microcontroller based gaming console.
+Library for control of an 8x8 LED matrix driven by MAX7219 display driver Fig. 1. Tested on Arduino Uno, Arduino Nano and STM32 NUCLEO-F446RE development boards. This library was written with the intention to be used for a microcontroller based gaming console.
 <br></br>
 <p align="center">
   <img src="https://github.com/dariusur/MAX7219_library/blob/main/images/MAX7219_LED_matrix.jpg">
@@ -50,6 +50,7 @@ This library was tested using the STM32 NUCLEO-F446RE development board. In the 
 <p align="center">
   <i>Fig. 2. SPI configuration.</i>
 </p>
+<br></br>
 4. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
 5. In the main.c file add lines of code as shown in Fig. 3.
 `printf("asdasd");`
