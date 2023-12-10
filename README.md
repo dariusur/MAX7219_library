@@ -1,7 +1,5 @@
 # MAX7219_library
 Library for control of an 8x8 LED matrix driven by MAX7219 display driver. Tested on Arduino Uno, Arduino Nano and STM32 NUCLEO-F446RE development boards. This library was written with the intention to be used for a microcontroller based gaming console.
-
-
 <p align="center">
   <img src="https://github.com/dariusur/MAX7219_library/blob/main/images/MAX7219_LED_matrix.jpg">
 </p>
@@ -9,7 +7,6 @@ Library for control of an 8x8 LED matrix driven by MAX7219 display driver. Teste
   *Fig. 1. MAX7219 display driver chip with an 8x8 LED matrix*
 </p>
       
-
 ## Features
 - Easy driver configuration with dedicated functions, normal operation can be initialized with a single function.
 - Arduino library features **software** implemented SPI protocol which allows unconstrained selection of CS, CLK and DATA pins.
