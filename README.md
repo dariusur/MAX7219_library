@@ -53,5 +53,4 @@ This library was tested using the STM32 NUCLEO-F446RE development board. In the 
 <br></br>
 3. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
 4. In the main.c file add lines of code as shown in Fig. 3.
-`printf("asdasd");`
 5. Compile and upload code.
