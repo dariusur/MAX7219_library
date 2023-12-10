@@ -59,21 +59,19 @@ This library was tested using the STM32 NUCLEO-F446RE development board. In the 
 ```cpp
 #include "MAX7219.h"
 MAX7219 matrix(&hspi1);
-int main(void)
-{
+int main(void){
 	matrix.init();
-	while (1)
-	{
-	for(uint8_t intensity=0;intensity<=15;intensity++){
-	matrix.sendData(intensity_reg_addr, intensity);
-	for(uint8_t i=0;i<8;i++){
-	for(uint8_t j=0;j<8;j++){
-	matrix.switchLED(i,j,1);
-	HAL_Delay(50);
-	}
-	}
-	matrix.clear();
-	}
+	while (1){
+		for(uint8_t intensity=0;intensity<=15;intensity++){
+			matrix.sendData(intensity_reg_addr, intensity);
+			for(uint8_t i=0;i<8;i++){
+				for(uint8_t j=0;j<8;j++){
+					matrix.switchLED(i,j,1);
+					HAL_Delay(50);
+				}
+			}
+			matrix.clear();
+		}
 	}
 }
 ```
