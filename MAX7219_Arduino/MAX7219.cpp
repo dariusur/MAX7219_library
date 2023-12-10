@@ -36,7 +36,8 @@ void MAX7219::clear()
 	}
 }
 
-void MAX7219::configCtrlReg(uint8_t reg_address, uint8_t data)
+// Sends data to the selected address. For available register addresses refer to either "MAX7219.h" or to the datasheet.
+void MAX7219::sendData(uint8_t reg_address, uint8_t data)
 {
 	digitalWrite(cs, LOW);
 	shiftOut(din, clk, MSBFIRST, reg_address);
@@ -44,6 +45,10 @@ void MAX7219::configCtrlReg(uint8_t reg_address, uint8_t data)
 	digitalWrite(cs, HIGH);
 }
 
+// Switches a signle LED on or off in the matrix.
+// uint8_t column [0-8]
+// uint8_t row [0-8]
+// uint8_t data [0-1]
 void MAX7219::switchLED(uint8_t column, uint8_t row, uint8_t data)
 {
     bitWrite(frame_buffer[column], row, data); // sets or clears a bit in register
