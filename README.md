@@ -28,7 +28,11 @@ Library for control of an 8x8 LED matrix driven by MAX7219 display driver (Fig. 
 3. Launch Arduino IDE and open the example sketch for testing (File > Examples > MAX7219_Arduino > fill_screen).
 
 **Platform IO**
-TODO
+1. Download and extract the library ZIP file.
+2. Create a Platform IO project.
+3. Place the MAX7219_Arduino folder in the lib folder inside the project directory.
+4. Copy and paste the example code (fill_screen.ino) to main.cpp in src folder.
+5. Compile and upload the code.
 
 ### STM32
 To use MAX7219 display driver with STM32 microcontroller you will also need a logic level converter. The logic high level for the driver should be at least 3.5 V which is not low enough to be reliably controlled by the STM32.
