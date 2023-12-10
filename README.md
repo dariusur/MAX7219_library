@@ -54,16 +54,27 @@ This library was tested using the STM32 NUCLEO-F446RE development board. In the 
 <br></br>
 
 4. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
-5. In the main.c file add lines of code as shown in Fig. 3.
+5. In the main.c file add lines of code shown below.
 
 ```cpp
-#include <FastLED.h>
-#define NUM_LEDS 60
-CRGB leds[NUM_LEDS];
-void setup() { FastLED.addLeds<NEOPIXEL, 6>(leds, NUM_LEDS); }
-void loop() {
-	leds[0] = CRGB::White; FastLED.show(); delay(30);
-	leds[0] = CRGB::Black; FastLED.show(); delay(30);
+#include "MAX7219.h"
+MAX7219 matrix(&hspi1);
+int main(void)
+{
+   matrix.init();
+   while (1)
+  {
+	for(uint8_t intensity=0;intensity<=15;intensity++){
+		matrix.sendData(intensity_reg_addr, intensity);
+		for(uint8_t i=0;i<8;i++){
+			for(uint8_t j=0;j<8;j++){
+				matrix.switchLED(i,j,1);
+				HAL_Delay(50);
+			}
+		}
+		matrix.clear();
+	}
+  }
 }
 ```
 
