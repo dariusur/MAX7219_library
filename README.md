@@ -75,5 +75,4 @@ int main(void){
 	}
 }
 ```
-
-7. Compile and upload code.
+6. Compile and upload code.
