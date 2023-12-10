@@ -51,7 +51,7 @@ This library was tested using the STM32 NUCLEO-F446RE development board. In the 
   <i>Fig. 2. SPI configuration.</i>
 </p>
 <br></br>
-4. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
-5. In the main.c file add lines of code as shown in Fig. 3.
+3. Place the MAX7219.h and MAX7219.cpp files in Core > Inc and Core > Src folders respectively.
+4. In the main.c file add lines of code as shown in Fig. 3.
 `printf("asdasd");`
-6. Compile and upload code.
+5. Compile and upload code.
