@@ -16,11 +16,11 @@ void MAX7219::init()
 	pinMode(cs, OUTPUT); 
 	digitalWrite(clk, HIGH); // clk signal is active low
 	
-	configCtrlReg(max7219_reg_decodeMode, 0x00); // No decode for digits 7-0
-	configCtrlReg(max7219_reg_intensity, 0x02); // 0x00 - 0x0F
-	configCtrlReg(max7219_reg_scanLimit, 0x07); // display all digits
-	configCtrlReg(max7219_reg_shutdown, 0x01); // normal operation
-	configCtrlReg(max7219_reg_displayTest, 0x00); // normal operation
+	sendData(max7219_reg_decodeMode, 0x00); // No decode for digits 7-0
+	sendData(max7219_reg_intensity, 0x02); // 0x00 - 0x0F
+	sendData(max7219_reg_scanLimit, 0x07); // display all digits
+	sendData(max7219_reg_shutdown, 0x01); // normal operation
+	sendData(max7219_reg_displayTest, 0x00); // normal operation
 	clear(); // Turn all LEDs off
 }
 

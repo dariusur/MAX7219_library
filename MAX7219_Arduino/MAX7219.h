@@ -26,8 +26,6 @@
 #define shutdown_reg_config 0x01 // normal operation
 #define displayTest_reg_config 0x00 // normal operation
 
-#define 
-
 class MAX7219
 {
   public:
