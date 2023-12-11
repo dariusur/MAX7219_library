@@ -36,6 +36,7 @@ Library for control of an 8x8 LED matrix driven by MAX7219 display driver (Fig. 
 
 ### STM32
 To use MAX7219 display driver with STM32 microcontroller you will also need a logic level converter. The logic high level for the driver should be at least 3.5 V which is not low enough to be reliably controlled by the STM32.
+<br></br>
 **STM32CubeIDE**
 1. Download and extract the library ZIP file.
 2. Launch STM32CubeIDE and create a workspace where you like.
