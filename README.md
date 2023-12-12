@@ -27,7 +27,7 @@ Library for control of an 8x8 LED matrix driven by MAX7219 display driver (Fig. 
 2. Place the MAX7219_Arduino folder in the Arduino libraries folder (example: C:\Users\Darius\Documents\Arduino\libraries).
 3. Launch Arduino IDE and open the example sketch for testing (File > Examples > MAX7219_Arduino > fill_screen).
 
-**Platform IO**
+**PlatformIO**
 1. Download and extract the library ZIP file.
 2. Create a Platform IO project.
 3. Place the MAX7219_Arduino folder in the lib folder inside the project directory.
